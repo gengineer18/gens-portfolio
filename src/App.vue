@@ -1,23 +1,39 @@
 <template>
-  <div id="app">
-    <MyHeader />
-    <router-view/>
-  </div>
+  <v-app>
+    <v-toolbar app>
+      <v-toolbar-side-icon></v-toolbar-side-icon>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Gen's Portfolio Site</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        flat
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+      >
+        <span class="mr-2">Latest Release</span>
+      </v-btn>
+    </v-toolbar>
+
+    <v-content>
+      <MyHeader/>
+      <router-view/>
+    </v-content>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-</style>
-
 <script>
-  import MyHeader from "@/components/MyHeader";
-  export default {
-    components: {MyHeader}
+import MyHeader from "@/components/MyHeader";
+
+export default {
+  name: 'App',
+  components: {
+    MyHeader
+  },
+  data () {
+    return {
+      //
+    }
   }
+}
 </script>

@@ -14,9 +14,20 @@
               <p>{{ work.explain}}</p>
               <p>
                 使った技術：
-                <span v-for="(skill, i) in work.skills" :key="i" class="works__lang">{{ skill }}</span>
+                <span
+                  v-for="(skill, i) in work.skills"
+                  :key="i" class="works__lang"
+                >
+                  {{ skill }}
+                </span>
               </p>
-              <v-btn color="blue" outline @click="openDemoPage(work.href)">Demo</v-btn>
+              <v-btn
+                color="blue"
+                outline
+                @click="openDemoPage(work.href)"
+              >
+                Demo
+              </v-btn>
             </article>
           </v-card-title>
         </v-card>

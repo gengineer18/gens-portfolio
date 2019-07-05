@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import 'normalize.css'
 import MyHeader from "@/components/MyHeader";
 
 export default {
@@ -37,3 +38,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+</style>

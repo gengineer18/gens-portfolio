@@ -1,10 +1,23 @@
 <template>
   <section class="contact">
-    <h1>Contact me</h1>
-    <p v-for="contact in contacts" :key="contact.sns" @click="link()">
-      {{ contact.sns }}:
-      <a target="_blank">{{ contact.name }}</a>
-    </p>
+    <v-layout justify-center>
+      <h1>Contact me</h1>
+    </v-layout>
+    <v-layout
+      justify-center
+      v-for="(contact, i) in contacts"
+      :key="i"
+    >
+      <p>
+        {{ contact.text }}:
+        <a
+          :href="contact.href"
+          target="_blank"
+        >
+          {{ contact.account }}
+        </a>
+      </p>
+    </v-layout>
   </section>
 </template>
 
@@ -14,16 +27,20 @@ export default {
   data: () => {
     return {
       contacts: [
-        { sns: 'Twitter', name: '@gengineer18', link: 'https://twitter.com/gengineer18' },
-        { sns: "GitHub", name: 'gengineer18', link: 'https://github.com/gengineer18' },
-        { sns: 'Facebook', name: '妹尾 弦', link: 'https://www.facebook.com/gen.senoo' },
-        { sns: "Gmail", name: 'gengineer.web@gmail.com', link: 'gengineer.web@gmail.com' }
+        { text: 'Twitter', account: '@gengineer18', href: 'https://twitter.com/gengineer18' },
+        { text: "GitHub", account: 'gengineer18', href: 'https://github.com/gengineer18' },
+        { text: 'Facebook', account: '妹尾 弦', href: 'https://www.facebook.com/gen.senoo' }
       ]
     }
   }
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  a {
+    color: blue;
+    &:hover{
+      color: red;
+    }
+  }
 </style>

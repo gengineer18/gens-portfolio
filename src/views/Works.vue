@@ -15,16 +15,16 @@
               <p>
                 使った技術：
                 <span
-                  v-for="(skill, i) in work.skills"
-                  :key="i" class="works__lang"
+                    v-for="(skill, i) in work.skills"
+                    :key="i" class="works__lang"
                 >
                   {{ skill }}
                 </span>
               </p>
               <v-btn
-                color="blue"
-                outline
-                @click="openDemoPage(work.href)"
+                  color="blue"
+                  outline
+                  @click="openDemoPage(work.href)"
               >
                 Demo
               </v-btn>
@@ -45,15 +45,16 @@
         {
           title: 'Santac-lause',
           href: 'https://santac-lause3.appspot.com/',
-          explain:'初めて作ったポートフォリオ用アプリケーションです。' +
+          explain: '初めて作ったポートフォリオ用アプリケーションです。' +
             '自分のお気に入りを3つの選択肢として共有できるSNSチックなアプリです。(リファクタリング予定)',
-          skills:['Python', 'Django', 'Sass', 'Bootstrap','GAE',]
+          skills: ['Python', 'Django', 'Sass', 'Bootstrap', 'GAE',]
         },
-        { title: 'Portfolio Site',
+        {
+          title: 'Portfolio Site',
           href: 'https://www.google.co.jp', // 一旦Googleにリンクを仮置き
-          explain:'このサイトのことです。Vue.jsの勉強を兼ねて作りました。' +
+          explain: 'このサイトのことです。Vue.jsの勉強を兼ねて作りました。' +
             'Nuxt.jsでの制作は少々過剰かなと思い、Vue CLI 3を採用しています。配色はあくまで自分の好みにしています。',
-          skills:['Vue.js','Vuetify']
+          skills: ['Vue.js', 'Vuetify']
         }
       ]
     }),
@@ -66,11 +67,16 @@
 </script>
 
 <style scoped>
-.works {
-  max-width: 980px;
-  margin: auto;
-}
-.works__lang:not(:first-child){
+  .works {
+    max-width: 980px;
+    margin: auto;
+  }
+
+  .works__lang:not(:first-child) {
     margin-left: 5px;
-}
+  }
+
+  article {
+    text-align: left;
+  }
 </style>

@@ -10,7 +10,7 @@
           <v-card-title primary-title>
             <article>
               <p class="title">{{ work.title}}</p>
-              <v-divider></v-divider>
+              <v-divider/>
               <p>{{ work.explain}}</p>
               <p>
                 使った技術：
@@ -22,7 +22,7 @@
                 </span>
               </p>
               <v-btn
-                  color="blue"
+                  color="blue darken-4"
                   outline
                   @click="openDemoPage(work.href)"
               >
@@ -67,16 +67,7 @@
 </script>
 
 <style scoped>
-  .works {
-    max-width: 980px;
-    margin: auto;
-  }
-
   .works__lang:not(:first-child) {
     margin-left: 5px;
-  }
-
-  article {
-    text-align: left;
   }
 </style>

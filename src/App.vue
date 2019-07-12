@@ -35,5 +35,12 @@ export default {
 </script>
 
 <style lang="scss">
+  section {
+    max-width: 980px;
+    margin: auto;
+  }
 
+  article {
+    text-align: left;
+  }
 </style>

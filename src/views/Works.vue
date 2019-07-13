@@ -15,16 +15,16 @@
               <p>
                 使った技術：
                 <span
-                    v-for="(skill, i) in work.skills"
-                    :key="i" class="works__lang"
+                        v-for="(skill, i) in work.skills"
+                        :key="i" class="works__lang"
                 >
                   {{ skill }}
                 </span>
               </p>
               <v-btn
-                  color="blue darken-4"
-                  outline
-                  @click="openDemoPage(work.href)"
+                      color="blue darken-4"
+                      outline
+                      @click="openDemoPage(work.href)"
               >
                 Demo
               </v-btn>

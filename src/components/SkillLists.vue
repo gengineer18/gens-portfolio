@@ -1,7 +1,8 @@
 <template>
     <div>
         <v-card class="pa-3">
-            <p>{{ title }}</p>
+            <h3 class="title">{{ title }}</h3>
+            <v-divider/>
             <p>{{ explain }}</p>
             <SkillCards :skills="skills"/>
         </v-card>

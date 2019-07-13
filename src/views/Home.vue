@@ -81,7 +81,7 @@
   }
 
   // animationプロパティの関数
-  @mixin animation($animation-name){
+  @mixin animation($animation-name) {
     animation: $animation-name;
     -moz-animation: $animation-name;
     -webkit-animation: $animation-name;
@@ -108,7 +108,7 @@
 
   // アニメーションの挙動(青)
   @include keyframes(stroke_blue_anime) {
-  0% {
+    0% {
       stroke-dashoffset: 2000;
       fill: transparent;
     }
@@ -124,7 +124,7 @@
 
   // アニメーションの挙動(赤)
   @include keyframes(stroke_red_anime) {
-  0% {
+    0% {
       stroke-dashoffset: 2000;
       fill: transparent;
     }
@@ -140,7 +140,7 @@
 
   // アニメーションの挙動(グレー)
   @include keyframes(stroke_gray_anime) {
-  0% {
+    0% {
       stroke-dashoffset: 2000;
       fill: transparent;
     }

@@ -40,24 +40,26 @@
 <script>
   export default {
     name: "Works",
-    data: () => ({
-      works: [
-        {
-          title: 'Santac-lause',
-          href: 'https://santac-lause3.appspot.com/',
-          explain: '初めて作ったポートフォリオ用アプリケーションです。' +
-            '自分のお気に入りを3つの選択肢として共有できるSNSチックなアプリです。(リファクタリング予定)',
-          skills: ['Python', 'Django', 'Sass', 'Bootstrap', 'GAE',]
-        },
-        {
-          title: 'Portfolio Site',
-          href: 'https://www.google.co.jp', // 一旦Googleにリンクを仮置き
-          explain: 'このサイトのことです。Vue.jsの勉強を兼ねて作りました。' +
-            'Nuxt.jsでの制作は少々過剰かなと思い、Vue CLI 3を採用しています。配色はあくまで自分の好みにしています。',
-          skills: ['Vue.js', 'Vuetify']
-        }
-      ]
-    }),
+    data: () => {
+      return {
+        works: [
+          {
+            title: 'Santac-lause',
+            href: 'https://santac-lause3.appspot.com/',
+            explain: '初めて作ったポートフォリオ用アプリケーションです。' +
+              '自分のお気に入りを3つの選択肢として共有できるSNSチックなアプリです。(リファクタリング予定)',
+            skills: ['Python', 'Django', 'Sass', 'Bootstrap', 'GAE',]
+          },
+          {
+            title: 'Portfolio Site',
+            href: 'https://www.google.co.jp', // 一旦Googleにリンクを仮置き
+            explain: 'このサイトのことです。Vue.jsの勉強を兼ねて作りました。' +
+              'Nuxt.jsでの制作は少々過剰かなと思い、Vue CLI 3を採用しています。配色はあくまで自分の好みにしています。',
+            skills: ['Vue.js', 'Vuetify']
+          }
+        ]
+      }
+    },
     methods: {
       openDemoPage: (href) => {
         window.open(href);

@@ -4,27 +4,31 @@
       <h2>Skill Set</h2>
     </v-layout>
 
-    <SkillLists :explain="explainMarkUp" :title="titleMarkUp" :skills="skillsMarkUp" class="skillLists"/>
+    <transition-group name="skill-lists-animation" appear>
+      <div class="skill-lists-animation-enter" :key="explainFrontEnd">
+      <SkillLists :explain="explainMarkUp" :title="titleMarkUp" :skills="skillsMarkUp" class="skillLists"/>
 
-    <SkillLists :explain="explainFrontEnd" :title="titleFrontEnd" :skills="skillsFrontEnd" class="skillLists"/>
+      <SkillLists :explain="explainFrontEnd" :title="titleFrontEnd" :skills="skillsFrontEnd" class="skillLists"/>
 
-    <SkillLists :explain="explainBackEnd" :title="titleBackEnd" :skills="skillsBackEnd" class="skillLists"/>
+      <SkillLists :explain="explainBackEnd" :title="titleBackEnd" :skills="skillsBackEnd" class="skillLists"/>
 
-    <SkillLists :explain="explainDatabase" :title="titleDatabase" :skills="skillsDatabase" class="skillLists"/>
+      <SkillLists :explain="explainDatabase" :title="titleDatabase" :skills="skillsDatabase" class="skillLists"/>
 
-    <SkillLists :explain="explainInfra" :title="titleInfra" :skills="skillsInfra" class="skillLists"/>
+      <SkillLists :explain="explainInfra" :title="titleInfra" :skills="skillsInfra" class="skillLists"/>
 
-    <SkillLists :explain="explainTools" :title="titleTools" :skills="skillsTools" class="skillLists"/>
+      <SkillLists :explain="explainTools" :title="titleTools" :skills="skillsTools" class="skillLists"/>
 
-    <v-layout row wrap>
-      <v-flex v-for="(license, index) in licenses" :key="index" xs12 md6>
-        <v-card class="ma-3 pa-3">
-          <h3>{{ license.name }}</h3>
-          <v-divider/>
-          <p>取得年: {{ license.year }}</p>
-        </v-card>
-      </v-flex>
-    </v-layout>
+      <v-layout row wrap>
+        <v-flex v-for="(license, index) in licenses" :key="index" xs12 md6>
+          <v-card class="ma-3 pa-3">
+            <h3>{{ license.name }}</h3>
+            <v-divider/>
+            <p>取得年: {{ license.year }}</p>
+          </v-card>
+        </v-flex>
+      </v-layout>
+</div>
+    </transition-group>
   </section>
 </template>
 
@@ -99,4 +103,14 @@
   .skillLists {
     margin: 10px;
   }
+
+  .skill-lists-animation-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .skill-lists-animation-enter-active {
+    transition: all 1.5s;
+  }
+
 </style>

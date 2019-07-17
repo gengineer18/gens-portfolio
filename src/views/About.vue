@@ -13,8 +13,10 @@
       </div>
     </transition-group>
 
+    <v-divider class="mt-2"/>
+
     <transition-group name="slide-timeline" appear>
-      <div v-for="(timeLine, index) in timeLines" :key="index" class="slide-item">
+      <div v-for="(timeLine, index) in timeLines" :key="index" class="slide-item mt-2">
         <h3>{{ timeLine.name }}</h3>
         <p>{{ timeLine.explain1 }}</p>
         <p>{{ timeLine.explain2 }}</p>

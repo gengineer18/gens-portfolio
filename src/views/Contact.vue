@@ -1,7 +1,7 @@
 <template>
   <section class="contact">
     <v-layout justify-center>
-      <h1>Contact me</h1>
+      <h2>Contact me</h2>
     </v-layout>
     <v-layout
             justify-center

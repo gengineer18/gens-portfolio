@@ -1,7 +1,7 @@
 <template>
   <section class="works">
     <v-layout justify-center>
-      <h1>This is my works page</h1>
+      <h2>This is my works page</h2>
     </v-layout>
 
     <v-layout row wrap>

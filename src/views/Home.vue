@@ -1,7 +1,7 @@
 <template>
-  <div class="home__box">
+  <div class="home__background">
 
-    <v-container>
+    <v-container class="home__box">
       <v-flex>
         <svg viewBox="0 0 29 12" version="1.1" xmlns="http://www.w3.org/2000/svg"
              xml:space="preserve" id="svg--line1" class="svg start">
@@ -102,7 +102,7 @@
   }
 
   @mixin stroke__gray {
-    stroke: grey;
+    stroke: gray;
     stroke-dashoffset: 2000;
   }
 
@@ -149,17 +149,34 @@
     }
     100% {
       stroke-dashoffset: 0;
-      fill: gray;
+      fill: lightgray;
       fill-opacity: 0.5;
     }
   }
 
   // 背景
+  .home__background {
+    width: 100%;
+    height: 400px;
+    /*background-image: url("");*/
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
   .home__box {
-    background-color: gainsboro;
+    background: rgba(0, 0, 0, 0.05);
     width: 100vw;
     max-width: 964px;
     margin: auto;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: block;
   }
 
   #svg--line1 {

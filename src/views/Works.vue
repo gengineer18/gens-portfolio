@@ -1,38 +1,43 @@
 <template>
   <section class="works">
     <v-layout justify-center>
-      <h2>This is my works page</h2>
+      <v-icon color="blue darken-4">work</v-icon>
+      <h1>My Works</h1>
     </v-layout>
 
-    <v-layout row wrap>
-      <v-flex v-for="work in works" :key="work.title" xs12 md6>
-        <v-card class="ma-2">
-          <v-card-title primary-title>
-            <article>
-              <p class="title">{{ work.title}}</p>
-              <v-divider/>
-              <p>{{ work.explain}}</p>
-              <p>
-                使った技術：
-                <span
-                        v-for="(skill, i) in work.skills"
-                        :key="i" class="works__lang"
-                >
+    <transition-group name="works__animation" appear>
+      <div class="works__animation-enter" :key="works">
+        <v-layout row wrap>
+          <v-flex v-for="work in works" :key="work.title" xs12 md6>
+            <v-card class="ma-2">
+              <v-card-title primary-title>
+                <article>
+                  <p class="title">{{ work.title }}</p>
+                  <v-divider/>
+                  <p>{{ work.explain }}</p>
+                  <p>
+                    使った技術：
+                    <span
+                            v-for="(skill, i) in work.skills"
+                            :key="i" class="works__lang"
+                    >
                   {{ skill }}
                 </span>
-              </p>
-              <v-btn
-                      color="blue darken-4"
-                      outline
-                      @click="openDemoPage(work.href)"
-              >
-                Demo
-              </v-btn>
-            </article>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-    </v-layout>
+                  </p>
+                  <v-btn
+                          color="blue darken-4"
+                          outline
+                          @click="openDemoPage(work.href)"
+                  >
+                    Demo
+                  </v-btn>
+                </article>
+              </v-card-title>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </div>
+    </transition-group>
 
   </section>
 </template>
@@ -52,7 +57,7 @@
           },
           {
             title: 'Portfolio Site',
-            href: 'https://www.google.co.jp', // 一旦Googleにリンクを仮置き
+            href: 'https://gens-portfolio.firebaseapp.com/',
             explain: 'このサイトのことです。Vue.jsの勉強を兼ねて作りました。' +
               'Nuxt.jsでの制作は少々過剰かなと思い、Vue CLI 3を採用しています。配色はあくまで自分の好みにしています。',
             skills: ['Vue.js', 'Vuetify']
@@ -68,8 +73,17 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .works__lang:not(:first-child) {
     margin-left: 5px;
+  }
+
+  .works__animation-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .works__animation-enter-active {
+    transition: all 1.5s;
   }
 </style>

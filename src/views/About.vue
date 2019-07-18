@@ -1,21 +1,22 @@
 <template>
   <section class="about">
     <v-layout justify-center>
-      <h2>About Me</h2>
+      <v-icon color="blue darken-4">account_box</v-icon>
+      <h1>About Me</h1>
     </v-layout>
 
-    <transition-group name="slide-career" appear>
-      <div class="slide-career-enter" :key="timeLines">
-        <h3>名前：妹尾 弦</h3>
-        <h3>生年月日：1991/5/17</h3>
-        <h3>学歴：早稲田大学 社会科学部 2015/3卒業</h3>
-        <h3>職歴：金融ユーザー系SIer(2015/4-2019/8)</h3>
+    <transition-group name="slide--career" appear>
+      <div class="slide--career-enter" :key="timeLines">
+        <h2>名前：妹尾 弦</h2>
+        <h2>生年月日：1991/5/17</h2>
+        <h2>学歴：早稲田大学 社会科学部 2015/3卒業</h2>
+        <h2>職歴：金融ユーザー系SIer(2015/4-2019/8)</h2>
       </div>
     </transition-group>
 
     <v-divider class="mt-2"/>
 
-    <transition-group name="slide-timeline" appear>
+    <transition-group name="slide--timeline" appear>
       <div v-for="(timeLine, index) in timeLines" :key="index" class="slide-item mt-2">
         <h3>{{ timeLine.name }}</h3>
         <p>{{ timeLine.explain1 }}</p>
@@ -65,20 +66,20 @@
 </script>
 
 <style lang="scss" scoped>
-.slide-career-enter-active {
+.slide--career-enter-active {
   transition: all 1.5s;
 }
 
-.slide-career-enter {
+.slide--career-enter {
   opacity: 0;
-  transform: translateY(-5px);
+  transform: translateY(10px);
 }
 
-.slide-timeline-enter-active {
+.slide--timeline-enter-active {
   transition: all 2s ease-in-out 1s;
 }
 
-.slide-timeline-enter {
+.slide--timeline-enter {
   opacity: 0;
   transform: translateX(-10px);
 }

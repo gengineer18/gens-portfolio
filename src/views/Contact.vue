@@ -1,7 +1,8 @@
 <template>
   <section class="contact">
     <v-layout justify-center>
-      <h2>Contact me</h2>
+      <v-icon color="blue darken-4">message</v-icon>
+      <h1>Contact me</h1>
     </v-layout>
     <v-layout
             justify-center

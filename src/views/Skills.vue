@@ -1,7 +1,8 @@
 <template>
   <section class="skills">
     <v-layout justify-center>
-      <h2>Skill Set</h2>
+      <v-icon color="blue darken-4">laptop_mac</v-icon>
+      <h1>Skill Set</h1>
     </v-layout>
 
     <transition-group name="skill-lists-animation" appear>

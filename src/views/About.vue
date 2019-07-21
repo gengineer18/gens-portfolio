@@ -5,12 +5,16 @@
       <h1>About Me</h1>
     </v-layout>
 
-    <transition-group name="slide--career" appear>
-      <div class="slide--career-enter" :key="timeLines">
-        <h2>名前：妹尾 弦</h2>
-        <h2>生年月日：1991/5/17</h2>
-        <h2>学歴：早稲田大学 社会科学部 2015/3卒業</h2>
-        <h2>職歴：金融ユーザー系SIer(2015/4-2019/8)</h2>
+    <transition-group name="slide--career"
+                      appear>
+      <div class="slide--career-enter"
+           :key="timeLines">
+        <h2>Gen Senoo / 妹尾 弦</h2>
+        <p>
+          2019年9月より、フリーランスエンジニアとして活動致します。<br/>
+          Webデザインからフロントエンド、バックエンドまで幅広く経験を致しました。<br/>
+          現在はフロントエンドに注力したいと考えております。
+        </p>
       </div>
     </transition-group>
 
@@ -19,9 +23,11 @@
     <transition-group name="slide--timeline" appear>
       <div v-for="(timeLine, index) in timeLines" :key="index" class="slide-item mt-2">
         <h3>{{ timeLine.name }}</h3>
-        <p>{{ timeLine.explain1 }}</p>
-        <p>{{ timeLine.explain2 }}</p>
-        <p>{{ timeLine.explain3 }}</p>
+        <p>
+          {{ timeLine.explain1 }}<br>
+          {{ timeLine.explain2 }}<br>
+          {{ timeLine.explain3 }}
+        </p>
       </div>
     </transition-group>
 
@@ -66,21 +72,21 @@
 </script>
 
 <style lang="scss" scoped>
-.slide--career-enter-active {
-  transition: all 1.5s;
-}
+  .slide--career-enter-active {
+    transition: all 1.5s;
+  }
 
-.slide--career-enter {
-  opacity: 0;
-  transform: translateY(10px);
-}
+  .slide--career-enter {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 
-.slide--timeline-enter-active {
-  transition: all 2s ease-in-out 1s;
-}
+  .slide--timeline-enter-active {
+    transition: all 2s ease-in-out 1s;
+  }
 
-.slide--timeline-enter {
-  opacity: 0;
-  transform: translateX(-10px);
-}
+  .slide--timeline-enter {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
 </style>

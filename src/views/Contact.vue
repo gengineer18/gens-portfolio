@@ -4,17 +4,21 @@
       <v-icon color="blue darken-4">message</v-icon>
       <h1>Contact me</h1>
     </v-layout>
-    <v-layout
-            justify-center
-            v-for="(contact, i) in contacts"
-            :key="i"
-    >
+
+    <div class="contact__box">
+      <p>
+        お仕事のご依頼は、メールまたは各SNSのDMにて承ります。<br>
+        お気軽にご相談ください。
+      </p>
+    </div>
+
+    <v-layout justify-center
+              v-for="(contact, i) in contacts"
+              :key="i">
       <p>
         {{ contact.text }}:
-        <a
-                :href="contact.href"
-                target="_blank"
-        >
+        <a :href="contact.href"
+            target="_blank">
           {{ contact.account }}
         </a>
       </p>
@@ -44,5 +48,10 @@
     &:hover {
       color: red;
     }
+  }
+
+  .contact__box {
+    margin: 0 auto;
+    width: 400px;
   }
 </style>

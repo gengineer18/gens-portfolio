@@ -11,7 +11,7 @@
            :key="timeLines">
         <h2>Gen Senoo / 妹尾 弦</h2>
         <p>
-          2019年9月より、フリーランスエンジニアとして活動致します。<br/>
+          2019年9月より、フリーランスエンジニアとして活動を致します。<br/>
           Webデザインからフロントエンド、バックエンドまで幅広く経験を致しました。<br/>
           現在はフロントエンドに注力したいと考えております。
         </p>
@@ -21,7 +21,7 @@
     <v-divider class="mt-2"/>
 
     <transition-group name="slide--timeline" appear>
-      <div v-for="(timeLine, index) in timeLines" :key="index" class="slide-item mt-2">
+      <div v-for="(timeLine, index) in timeLines" :key="index" class="slide-item mt-4">
         <h3>{{ timeLine.name }}</h3>
         <p>
           {{ timeLine.explain1 }}<br>
@@ -72,6 +72,9 @@
 </script>
 
 <style lang="scss" scoped>
+  .about {
+    padding: 8px;
+  }
   .slide--career-enter-active {
     transition: all 1.5s;
   }

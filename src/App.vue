@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-toolbar app>
+    <v-toolbar app color="blue darken-4" dark>
       <v-toolbar-side-icon @click.stop="OpenSideMenu"/>
       <v-toolbar-title class="headline">
         <span>Gen Senoo's Portfolio Site</span>

@@ -40,7 +40,7 @@
 
 <style lang="scss" scoped>
   #nav {
-    padding: 30px;
+    padding: 16px;
 
     a {
       font-weight: bold;

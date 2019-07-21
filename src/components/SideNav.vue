@@ -1,5 +1,5 @@
 <template>
-  <v-layout wrap style="height: 200px;">
+  <v-layout wrap>
     <v-navigation-drawer v-model="$store.state.drawer" absolute temporary>
 
       <v-list class="pt-0">

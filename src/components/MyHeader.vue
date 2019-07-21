@@ -1,13 +1,7 @@
 <template>
   <header>
     <nav id="nav">
-      <v-icon small
-              color="blue darken-4">
-        home
-      </v-icon>
-      <router-link to="/">Home</router-link>
-      |
-
+      
       <v-icon small
               color="blue darken-4">
         account_box

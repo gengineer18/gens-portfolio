@@ -69,16 +69,17 @@
         ],
 
         titleDatabase: "データベース",
-        explainDatabase: "OR Mapperを使うよりも生のSQLの方が自信ありです。",
+        explainDatabase: "OR Mapperを使うよりも生のSQLの方が業務経験あり、自信もあります。",
         skillsDatabase: [
           {name: 'Oracle', years: 4.5, rate: 3.5},
           {name: 'MySQL', years: 0, rate: 1.5}
         ],
 
-        titleInfra: "インフラ",
+        titleInfra: "インフラ/クラウド",
         explainInfra: "公開している自作アプリはGCPを使ってデプロイしています。",
         skillsInfra: [
-          {name: 'GCP / Firebase', years: 0, rate: 1}
+          {name: 'Firebase', years: 0, rate: 1},
+          {name: 'GAE', years: 0, rate: 1}
         ],
 
         titleTools: "ツール",

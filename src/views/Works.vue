@@ -49,7 +49,7 @@
       return {
         works: [
           {
-            title: 'Santac-lause',
+            title: 'Santac-Lause',
             href: 'https://santac-lause3.appspot.com/',
             explain: '初めて作ったポートフォリオ用アプリケーションです。' +
               '自分のお気に入りを3つの選択肢として共有できるSNSチックなアプリです。(リファクタリング予定)',

@@ -15,10 +15,12 @@
     <v-layout justify-center
               v-for="(contact, i) in contacts"
               :key="i">
-      <p>
+      <p class="flexiblebox">
+        <i :class="contact.icon" class="fa-2x pr-2"/>
         {{ contact.text }}:
         <a :href="contact.href"
-            target="_blank">
+           target="_blank"
+           class="pl-2">
           {{ contact.account }}
         </a>
       </p>
@@ -32,9 +34,9 @@
     data: () => {
       return {
         contacts: [
-          {text: 'Twitter', account: '@gengineer18', href: 'https://twitter.com/gengineer18'},
-          {text: "GitHub", account: 'gengineer18', href: 'https://github.com/gengineer18'},
-          {text: 'Facebook', account: '妹尾 弦', href: 'https://www.facebook.com/gen.senoo'}
+          {text: 'Twitter', account: '@gengineer18', href: 'https://twitter.com/gengineer18', icon: 'fab fa-twitter '},
+          {text: "GitHub", account: 'gengineer18', href: 'https://github.com/gengineer18', icon: 'fab fa-github'},
+          {text: 'Facebook', account: '妹尾 弦', href: 'https://www.facebook.com/gen.senoo', icon: 'fab fa-facebook'}
         ]
       }
     }
@@ -53,5 +55,14 @@
   .contact__box {
     margin: 0 auto;
     width: 400px;
+  }
+
+  .flexiblebox {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+    align-items: center; /* 縦方向中央揃え */
+    -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+    justify-content: center; /* 横方向中央揃え */
   }
 </style>

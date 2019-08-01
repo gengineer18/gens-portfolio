@@ -12,22 +12,26 @@
             <v-card class="ma-2">
               <v-card-title primary-title>
                 <article>
+                  <div>
+                    <img class="works__img" :src="work.image_src" />
+                  </div>
+
                   <p class="title">{{ work.title }}</p>
                   <v-divider/>
                   <p>{{ work.explain }}</p>
                   <p>
                     使った技術：
                     <span
-                            v-for="(skill, i) in work.skills"
-                            :key="i" class="works__lang"
+                        v-for="(skill, i) in work.skills"
+                        :key="i" class="works__lang"
                     >
                   {{ skill }}
                 </span>
                   </p>
                   <v-btn
-                          color="blue darken-4"
-                          outline
-                          @click="openDemoPage(work.href)"
+                      color="blue darken-4"
+                      outline
+                      @click="openDemoPage(work.href)"
                   >
                     Demo
                   </v-btn>
@@ -53,14 +57,16 @@
             href: 'https://santac-lause3.appspot.com/',
             explain: '初めて作ったポートフォリオ用アプリケーションです。' +
               '自分のお気に入りを3つの選択肢として共有できるSNSチックなアプリです。(リファクタリング予定)',
-            skills: ['Python', 'Django', 'Sass', 'Bootstrap', 'GAE',]
+            skills: ['Python', 'Django', 'Sass', 'Bootstrap', 'GAE',],
+            image_src: require('../assets/work_image_santaclause.png')
           },
           {
             title: 'Portfolio Site',
             href: 'https://gens-portfolio.firebaseapp.com/',
             explain: 'このサイトのことです。Vue.jsの勉強を兼ねて作りました。' +
               'Nuxt.jsでの制作は少々過剰かなと思い、Vue CLI 3を採用しています。配色はあくまで自分の好みにしています。',
-            skills: ['Vue.js', 'Vuetify']
+            skills: ['Vue.js', 'Vuetify'],
+            image_src: require('../assets/work_image_portfolio.png')
           }
         ]
       }
@@ -85,5 +91,9 @@
 
   .works__animation-enter-active {
     transition: all 1.5s;
+  }
+
+  .works__img {
+    max-height: 120px;
   }
 </style>

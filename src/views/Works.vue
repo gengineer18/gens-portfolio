@@ -65,7 +65,7 @@
             href: 'https://gens-portfolio.firebaseapp.com/',
             explain: 'このサイトのことです。Vue.jsの勉強を兼ねて作りました。' +
               'Nuxt.jsでの制作は少々過剰かなと思い、Vue CLI 3を採用しています。配色はあくまで自分の好みにしています。',
-            skills: ['Vue.js', 'Vuetify'],
+            skills: ['Vue.js', 'Vuetify', 'Vue CLI 3', 'Vue Rooter', 'Vuex', 'firebase'],
             image_src: require('../assets/work_image_portfolio.png')
           }
         ]

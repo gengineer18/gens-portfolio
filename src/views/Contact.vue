@@ -11,7 +11,7 @@
            :key="contacts">
         <div class="contact__box">
           <p>
-            お仕事のご依頼は、メールまたは各SNSのDMにて承ります。<br>
+            お仕事のご依頼は、各SNSのDMにて承ります。<br>
             お気軽にご相談ください。
           </p>
         </div>
@@ -79,6 +79,7 @@
   .contact__box {
     margin: 0 auto;
     width: 400px;
+    text-align: center;
   }
 
   .slide--contact-enter-active {
